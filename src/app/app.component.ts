@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { inject } from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
 loadedFeature = 'recipe';
 
 onNavigate(feature: string) {
 this.loadedFeature = feature;
 }
   title = 'shop';
+ 
 }
