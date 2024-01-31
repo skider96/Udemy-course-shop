@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { inject } from '@vercel/analytics';
 import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipe-book/recipes.component';
@@ -9,6 +8,7 @@ import { RecipeItemComponent } from './recipe-book/recipe-list/recipe-item/recip
 import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { HeaderComponent } from './header/header.component';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { HeaderComponent } from './header/header.component';
     
   ],
   providers: [
-    provideClientHydration(),
+    ShoppingListService
   ],
   bootstrap: [AppComponent]
 })
